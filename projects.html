@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Projects</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="./index.html">About</a></li>
+    <li><a href="./blog.html">Blog</a></li>
+    <li><a href="./projects.html">Projects</a></li>
+    <li><a href="./teaching.html">Teaching</a></li>
+    <li><a href="./misc.html">Misc</a></li>
+  </ul>
+</nav>
+<header id="title-block-header">
+<h1 class="title">Projects</h1>
+</header>
+<p>Some fun stuff I’ve worked on.</p>
+<h2 id="tiger-compiler">Tiger Compiler</h2>
+<p>Educational compiler written in C++ for the <a
+href="https://www.cs.princeton.edu/~appel/modern/">Tiger</a> language.
+More context in the <a href="teaching.html#tiger-compiler">teaching</a>
+section.</p>
+<p>I started working on Tiger as a maintainer when I was still a student
+in 2020 and worked on improving the instruction selection process by
+switching from a custom code generator (<a
+href="https://gitlab.lre.epita.fr/tiger/monoburg"><code>monoburg</code></a>)
+to native C++ “pattern-matching” using <code>std::variant</code>s and
+<code>std::visit</code>. I’d call that a mixed result: deprecating
+<code>monoburg</code> was a success and meant we had one less project to
+maintain, but trying to match dynamic patterns with static variants
+meant that composite patterns were impossible and the matching process
+is very clunky and can result in error messages thousands of lines long
+(thank C++ templates)<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>. Back then, I was expecting that
+pattern-matching would eventually show up in a C++ version update<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>, but I guess that’s not happening
+any time soon so a student is currently working on rewriting this
+without <code>std::variant</code>s.</p>
+<p>Another topic I experimented with back then was adding support for
+functional programming through closure conversion. The main part of the
+codebase was not to be touched so I tried to leave the middle-end alone
+and resolve almost everything in the front-end through a large
+desugaring pass (similar to what we actually do with objects). I somehow
+managed to get it to work, although the result was not pretty, and ended
+up being left aside due to bikeshedding on the syntax for calls to
+function pointers<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>.</p>
+<p>Nowadays, I’m the main maintainer of the project along with Ghiles
+Ziat, and our work mostly revolves around helping the new students
+maintainer take their marks, reviewing their work, and deciding the
+direction the project takes.</p>
+<h2 id="keyboards">Keyboards</h2>
+<p>Not technically programming, but close enough. I use split minimalist
+keyboards and they’re a lot of fun, especially using <a
+href="https://zmk.dev/docs/keymaps/combos">combos</a>.</p>
+<p>I’ve had a GBoards <a
+href="https://kowodo.github.io/HardwareTools/gergoPlex.html">gergoplex</a>
+since 2021 and it’s great. It was cheap enough to get it delivered
+directly built from Canada and I haven’t had any issue with it since I
+got it. It even survived a catastrophic incident involving a spilled
+coffee cup over its bare PCB, somehow. GBoards seem to have closed shop,
+which is a shame because their keyboards were great.</p>
+<p>My other main keyboard is a 4x6 <a
+href="https://github.com/juhakaup/keyboards/tree/main/Cygnus%20v1.0">Dactyl
+Cygnus</a> from Juha Kauppinen which I handbuilt in late 2024.</p>
+<p><img src="img/cygnus.jpg" /></p>
+<p>I wanted to have a keyboard for home which I could use both for work
+and gaming, so I figured I’d need a number row and dedicated
+tab/shift/control keys. After days (and nights) of 3D printing the case
+and a couple days of soldering, I’m quite satisfied of the end result.
+If I were to do it again I’d probably only do one half in 4x6 and the
+other in 3x5 as I don’t use most of the “extra”<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+keys on the right hand side.</p>
+<p>Also I managed to fry the charging circuit of one of the nice!nano v2
+by soldering the battery in reverse<a href="#fn5" class="footnote-ref"
+id="fnref5" role="doc-noteref"><sup>5</sup></a> so I need to take it
+apart and swap batteries between the half that charges and the one that
+doesn’t every couple of month, which is annoying.</p>
+<h2 id="this-site">This site</h2>
+<p>Technically a project I guess. Built with from Markdown using
+<code>pandoc</code>, <code>sed</code>, <code>make</code> and some duct
+tape. It’s not much but it’s mine – and way simpler than any static code
+generator I could find.</p>
+<p>Thanks to this <a
+href="https://localghost.dev/blog/this-page-is-under-construction/">post</a>
+for giving enough motivation to jump the shark, and <a
+href="http://lukasschwab.me/blog/">these</a> <a
+href="https://www.sacredheartsc.com/blog/makefile-based-blogging/">blogs</a>
+for inspiration on building this using pandoc.</p>
+<p><a href="https://github.com/maelcravero/maelcravero.github.io">Source
+code</a>.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>I talked about it in detail in my talk at the <a
+href="https://www.youtube.com/watch?v=THGk7lFHgNQ"><em>Nuit de l’Info
+2021</em></a> (in French).<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>How young and naive I was! <a
+href="https://arewemodulesyet.org">We’re not even modules yet</a>…<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a
+href="https://wiki.haskell.org/Wadler%27s_Law">Wadler’s Law</a> truly is
+inevitable.<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Meaning, only 18 out of 27 keys.<a href="#fnref4"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>In case you’re wondering how that’s possible: I had
+batteries with positive red and negative black wires, which is expected,
+but JST connectors that had their colors swapped, so the red wire from
+the battery was prolonged by the black wire after the connector. I
+soldered red to B+ and black to B-, which should have been the opposite
+since <em>after the connector</em> black meant positive.<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
