@@ -38,9 +38,9 @@ syntax for calls to function pointers[^tc3].
 
 [^tc3]: [Wadler's Law](https://wiki.haskell.org/Wadler%27s_Law) truly is inevitable.
 
-Nowadays, I'm the main maintainer of the project along with Ghiles Ziat, and our
-work mostly revolves around helping the new students maintainer take their
-marks, reviewing their work, and deciding the direction the project takes.
+Nowadays, my work mostly revolves around helping the new students maintainer
+take their marks, reviewing their work, and deciding the direction the project
+takes.
 
 # Keyboards
 
@@ -71,17 +71,6 @@ on the right hand side.
 
 [^kb1]: Meaning, only 18 out of 27 keys.
 
-Also I managed to fry the charging circuit of one of the
-nice!nano v2 by soldering the battery in reverse[^kb2] so I need to
-take it apart and swap batteries between the half that charges and the one that
-doesn't every couple of month, which is annoying.
-
-[^kb2]: In case you're wondering how that's possible: I had batteries with
-positive red and negative black wires, which is expected, but JST connectors
-that had their colors swapped, so the red wire from the battery was prolonged by
-the black wire after the connector. I soldered red to B+ and black to B-, which
-should have been the opposite since *after the connector* black meant positive.
-
 # This site
 
 Technically a project I guess. Built with from Markdown using `pandoc`, `sed`,
@@ -90,7 +79,7 @@ any static code generator I could find.
 
 Thanks to this
 [post](https://localghost.dev/blog/this-page-is-under-construction/) for giving
-enough motivation to jump the shark, and [these](http://lukasschwab.me/blog/)
+enough motivation to get started, and [these](http://lukasschwab.me/blog/)
 [blogs](https://www.sacredheartsc.com/blog/makefile-based-blogging/) for
 inspiration on building this using pandoc.
 

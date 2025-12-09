@@ -4,9 +4,8 @@ title: Misc stuff
 
 Aside from programming, my hobbies and centers of interest include
 music (mostly rock), books & comics (mostly sci-fi), series & movies
-(mostly sci-fi), tabletop RPGs (mostly DND 5 but I'm preparing a
-[Mothership](https://www.tuesdayknightgames.com/pages/mothership-rpg) campaign),
-strategy and role-playing video games, tennis...
+(mostly sci-fi), tabletop RPGs (working on an escape plan from D&D 5e),
+strategy and role-playing video games and tennis.
 
 ## Music
 

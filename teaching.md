@@ -48,7 +48,7 @@ Learning these tools, as well as *learning to learn* them is necessary to pick
 up the language your boss tells you to use or simply stay relevant as trends in
 languages come and go.
 
-[^tyla2]: The hammer is C++, in case you were wondering.
+[^tyla2]: In this metaphor, the hammer is C++.
 
 This class is also the opportunity to give more insights on where our everyday
 languages come from and how they're essentialy all old and flawed, as well as
