@@ -18,7 +18,7 @@ ROOT = .
 CSS = style/style.css
 NAVBAR = navbar.html
 
-PANDOC = pandoc --shift-heading-level-by 1 -s -B $(NAVBAR) --css=%ROOT/static/$(CSS) 
+PANDOC = pandoc --shift-heading-level-by 1 -s -B $(NAVBAR) --css=%ROOT/$(CSS) 
 SED = sed -i -e 's/\(href=.*\)\.md/\1.html/g' -e 's/%ROOT/$(ROOT)/g'
 
 .PHONY: all clean
