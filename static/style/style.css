@@ -41,18 +41,30 @@ p {
   text-align: justify
 }
 
+.sort-reviews {
+  display: table;
+  width: 100%;
+}
+
 .record {
   display: table;
   width: 100%;
+  /* margin: 1em auto; */
 
-  p img {
-    width: 10em; 
+  td {
+    vertical-align: top;
+  }
+
+  img {
+    width: 12em; 
     float: left;
     margin: unset;
     margin-right: 1em;
+    margin-bottom: 2em;
   }
 
   h3 {
+    margin-top: 0;
     margin-bottom: 0;
   }
   

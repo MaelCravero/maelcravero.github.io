@@ -1,5 +1,8 @@
 ---
 title: Album reviews
+header-includes:
+  - <script src=albums.js></script>
+  - <script src=music.js></script>
 ---
 
 I listen to a fair amount of music and don't always remember everything. Here's
@@ -14,22 +17,21 @@ post-punk/art-rock scene in particular.
 These are sorted first by artist name, then by release date (most recent first).
 Cover arts are taken from [Rate Your Music](https://rateyourmusic.com).
 
-Last update: 01-03-2025
+I try to put a single highlight for each album on this playlist, feel free to
+have a listen.
 
-# Black Country New Road
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1nH8EpTKHfEiOwg0HAtoy9?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-::: record
-![](https://e.snmc.io/i/600/s/d41fd89a34689afe2a3c392958a5d40e/9391518/black-country-new-road-ants-from-up-there-Cover-Art.jpg)
-
-## Ants From Up There
-### 2022 - art-rock, post-rock
-### ★★★★★
+::: update
 :::
 
-::: record
-![](https://e.snmc.io/i/600/s/6bd10c3d453bd5516e1472dca97d7fee/8538705/black-country-new-road-for-the-first-time-Cover-Art.jpg)
+::: sort-reviews
 
-## For the First Time
-### 2021 - post-punk, post-rock
-### ★★★★★
+Sort by:
+<input type ="button" value="Band" onclick="render(band);"/>
+<input type ="button" value="Year" onclick="render(year);"/>
+<input type ="button" value="Review date" onclick="render(review_date);"/>
+:::
+
+::: reviews
 :::
